@@ -44,7 +44,7 @@ public abstract class Animal implements ISellable {
         return false;
     }
 
-    public String ToString() {
+    public String toString() {
         String reserved = "not reserved";
         if(this.ReservedBy != null) {
             reserved = String.format("reserved by %s", this.ReservedBy);

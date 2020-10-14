@@ -6,10 +6,10 @@ public class Cat extends Animal {
     public Cat(String name, Gender gender, String badHabits) {
         super(name, gender);
         this.BadHabits = badHabits;
-        setPrice(getPrice(badHabits));
+        setPrice(calcPrice(badHabits));
     }
 
-    public double getPrice(String badHabits) {
+    public double calcPrice(String badHabits) {
         double standardPrice = 350;
         int length = badHabits.length();
         double calculatedPrice = standardPrice - 20 * length;
@@ -23,8 +23,7 @@ public class Cat extends Animal {
         return BadHabits;
     }
 
-    @Override
-    public String ToString() {
-        return super.ToString() + ", bad habits: " + this.BadHabits.toLowerCase();
+    public String toString() {
+        return super.toString() + ", bad habits: " + this.BadHabits.toLowerCase() + ", price: " + this.getPrice();
     }
 }

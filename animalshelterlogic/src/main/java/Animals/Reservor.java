@@ -18,4 +18,8 @@ public class Reservor {
     public Date getReservedAt() {
         return ReservedAt;
     }
+
+    public String toString() {
+        return Name;
+    }
 }
